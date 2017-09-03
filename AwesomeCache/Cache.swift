@@ -256,7 +256,7 @@ open class Cache<T: NSCoding> {
         return urls?.flatMap { $0.deletingPathExtension().lastPathComponent } ?? []
     }
 
-    fileprivate func urlForKey(_ key: String) -> URL {
+    func urlForKey(_ key: String) -> URL {
         let k = sanitizedKey(key)
         return cacheDirectory
             .appendingPathComponent(k)
